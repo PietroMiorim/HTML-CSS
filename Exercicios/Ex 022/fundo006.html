@@ -8,16 +8,19 @@
     <style>
         body {
             height: 97vh;
-            background-color: black;
-            background-image: url(imagens/wallpaper002.jpg);
-            background-position: center center;
-            background-repeat: repeat-y;
+            background: black url(imagens/wallpaper002.jpg) center center no-repeat fixed;
             background-size: cover;
+        
+
+        /*
+            shorthand - background
+            COLOR > IMAGE > POSITION > REPEAT > [SIZE, nao esta funcionando colocar separado] > ATTACHMENT.
+        */
         }
 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             border: 2px solid black;
