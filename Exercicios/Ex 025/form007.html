@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<style>
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    fieldset#estado {
+        margin-bottom: 20px;
+    }
+</style>
+<body>
+    <h1>Exemplo Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset id="estado">
+            <legend> Selecione seu Estados</legend>
+            <p>
+                <label for="iest">Estado:</label>
+                <select name="est" id="iest">
+                    <optgroup label="Região Sudeste">
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="MG">Minas gerais</option>
+                    </optgroup>
+                    <optgroup label="Região Nordeste">
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="MA">Maranhão</option>
+                    </optgroup>
+                </select>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Escolha sua Profissão:</legend>
+            <p>
+                <label for="iprof">Profissão</label>
+                <input type="text" name="prof" id="iprof" list="lstprof">
+                <datalist id="lstprof">
+                    <option>Adiministrador</option>
+                    <option>Contabilista</option>
+                    <option>Desenvolvedor</option>
+                    <option>Professor</option>
+                </datalist>
+            </p>
+        </fieldset>
+
+            
+            <p>
+                <label for="imsg">Mensagem:</label> <br>
+                <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+            </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
